@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:deploy": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && npm run build && surge dist/app --domain https://bp-json-ld-prototype.surge.sh"
   },
   "private": true,
   "dependencies": {
